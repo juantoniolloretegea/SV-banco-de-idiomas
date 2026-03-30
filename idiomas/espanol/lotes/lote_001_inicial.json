@@ -1,0 +1,104 @@
+[
+  {
+    "id": "ES-NLP-0001",
+    "idioma": "es",
+    "dominio_proximo": "general",
+    "texto": "Necesito ordenar este material y comprobar si la pregunta está bien planteada.",
+    "acto_esperado": "clasificacion",
+    "objetivo_declarado": "Ordenación estructural del frame.",
+    "observables": {
+      "theta": "coherente",
+      "pi": "resuelta",
+      "kappa": "coherente",
+      "eta": "completa",
+      "gamma": "alineada",
+      "alpha": "apropiada",
+      "mu": "cerrada",
+      "chi": "sin-solicitud",
+      "psi": "cerrado"
+    },
+    "vector_esperado": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "gamma_h_esperada": {},
+    "k3_esperado": "APTO",
+    "politica_esperada": "cerrar",
+    "justificacion": "Frame bien formado y completamente cerrado."
+  },
+  {
+    "id": "ES-NLP-0002",
+    "idioma": "es",
+    "dominio_proximo": "inmunologia_puerta",
+    "texto": "Aporto hemograma e inmunofenotipo resumido. No pido diagnóstico; pido sólo verificar si la petición de estudio complementario está bien formulada.",
+    "acto_esperado": "derivacion",
+    "objetivo_declarado": "Preparar el frame para un agente posterior de inmunología.",
+    "observables": {
+      "theta": "coherente",
+      "pi": "resuelta",
+      "kappa": "coherente",
+      "eta": "completa",
+      "gamma": "alineada",
+      "alpha": "apropiada",
+      "mu": "cerrada",
+      "chi": "sin-solicitud",
+      "psi": "cerrado"
+    },
+    "vector_esperado": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "gamma_h_esperada": {},
+    "k3_esperado": "APTO",
+    "politica_esperada": "cerrar",
+    "justificacion": "Caso de puerta limpia hacia un agente inmunológico posterior."
+  },
+  {
+    "id": "ES-NLP-0003",
+    "idioma": "es",
+    "dominio_proximo": "inmunologia_puerta",
+    "texto": "Quiero una conclusión definitiva, pero no adjunto los informes completos. Digo que no hubo fiebre y luego afirmo que sí hubo fiebre varios días. No acepto aclaraciones adicionales.",
+    "acto_esperado": "derivacion",
+    "objetivo_declarado": "Forzar salida final sin cierre legítimo.",
+    "observables": {
+      "theta": "desvio",
+      "pi": "bloqueada",
+      "kappa": "contradictoria",
+      "eta": "defectuosa",
+      "gamma": "bloqueada",
+      "alpha": "inapropiada",
+      "mu": "incompatible",
+      "chi": "denegada",
+      "psi": "bloqueado"
+    },
+    "vector_esperado": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "gamma_h_esperada": {},
+    "k3_esperado": "NO_APTO",
+    "politica_esperada": "fork",
+    "justificacion": "Contradicción material, insuficiencia y denegación de clarificación."
+  }
+]
