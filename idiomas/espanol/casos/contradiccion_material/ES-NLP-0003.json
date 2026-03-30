@@ -6,7 +6,7 @@
   "acto_esperado": "derivacion",
   "objetivo_declarado": "Forzar salida final sin cierre legítimo.",
   "observables": {
-    "theta": "desvio",
+    "theta": "desvío",
     "pi": "bloqueada",
     "kappa": "contradictoria",
     "eta": "defectuosa",

@@ -6,13 +6,13 @@
   "acto_esperado": "consulta|clasificacion|resumen|clarificacion|derivacion",
   "objetivo_declarado": "Objetivo explícito del frame.",
   "observables": {
-    "theta": "coherente|desvio|indeterminado",
+    "theta": "coherente|desvío|indeterminado",
     "pi": "sin-pregunta|resuelta|bloqueada|indeterminada",
     "kappa": "coherente|contradictoria|indeterminada",
     "eta": "completa|defectuosa|indeterminada",
     "gamma": "alineada|bloqueada|indeterminada",
     "alpha": "apropiada|inapropiada|indeterminada",
-    "mu": "sin-ambiguedad|cerrada|incompatible|indeterminada",
+    "mu": "sin-ambigüedad|cerrada|incompatible|indeterminada",
     "chi": "sin-solicitud|atendida|denegada|indeterminada",
     "psi": "en-curso|cerrado|bloqueado|indeterminado"
   },
