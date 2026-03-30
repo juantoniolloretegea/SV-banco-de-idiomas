@@ -1,0 +1,36 @@
+funcion canonizar_lexico_visible(ω):
+    para cada observable textual del dominio:
+        normalizar mayúsculas, tildes y variantes gráficas equivalentes
+        verificar pertenencia al léxico canónico declarado
+    devolver ω_can
+
+funcion i_nlp(paquete observacional ω):
+    ω_can = canonizar_lexico_visible(ω)
+    evaluar P1,...,P9 con reglas ternarias explícitas
+    devolver la célula conversacional mínima v
+
+funcion gamma_h_nlp(célula v, horizonte H_NLP):
+    para cada posición Pj con valor U:
+        si no existe suceso que pueda instanciar sobre Pj:
+            clasificar como irreducible
+        si el soporte de cierre es {0} o {1}:
+            clasificar como resoluble
+        si el soporte de cierre es {0,1}:
+            clasificar como fronteriza
+    devolver clasificación completa
+
+funcion clasificar_frame_k3(célula v):
+    contar n0, n1, nU sobre las 9 posiciones
+    si n1 ≥ T(9)=7:
+        devolver NO_APTO
+    si n0 ≥ T(9)=7:
+        devolver APTO
+    devolver INDETERMINADO
+
+funcion verificar_gobernabilidad(ω, H_NLP):
+    v = i_nlp(ω)
+    gamma = gamma_h_nlp(v, H_NLP)
+    clase = clasificar_frame_k3(v)
+    si existe alguna posición irreducible:
+        devolver (NO_GOBERNABLE, clase)
+    devolver (GOBERNABLE, clase)
