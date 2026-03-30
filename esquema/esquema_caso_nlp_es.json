@@ -1,0 +1,37 @@
+{
+  "id": "ES-NLP-0001",
+  "idioma": "es",
+  "dominio_proximo": "general|inmunologia_puerta",
+  "texto": "Texto del caso en español.",
+  "acto_esperado": "consulta|clasificacion|resumen|clarificacion|derivacion",
+  "objetivo_declarado": "Objetivo explícito del frame.",
+  "observables": {
+    "theta": "coherente|desvio|indeterminado",
+    "pi": "sin-pregunta|resuelta|bloqueada|indeterminada",
+    "kappa": "coherente|contradictoria|indeterminada",
+    "eta": "completa|defectuosa|indeterminada",
+    "gamma": "alineada|bloqueada|indeterminada",
+    "alpha": "apropiada|inapropiada|indeterminada",
+    "mu": "sin-ambiguedad|cerrada|incompatible|indeterminada",
+    "chi": "sin-solicitud|atendida|denegada|indeterminada",
+    "psi": "en-curso|cerrado|bloqueado|indeterminado"
+  },
+  "vector_esperado": [
+    0,
+    "U",
+    0,
+    0,
+    0,
+    0,
+    "U",
+    0,
+    0
+  ],
+  "gamma_h_esperada": {
+    "2": "fronteriza",
+    "7": "fronteriza"
+  },
+  "k3_esperado": "INDETERMINADO",
+  "politica_esperada": "continuar",
+  "justificacion": "Justificación breve del caso."
+}

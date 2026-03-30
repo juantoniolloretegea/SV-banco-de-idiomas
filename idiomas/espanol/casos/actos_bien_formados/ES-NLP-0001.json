@@ -1,0 +1,34 @@
+{
+  "id": "ES-NLP-0001",
+  "idioma": "es",
+  "dominio_proximo": "general",
+  "texto": "Necesito ordenar este material y comprobar si la pregunta está bien planteada.",
+  "acto_esperado": "clasificacion",
+  "objetivo_declarado": "Ordenación estructural del frame.",
+  "observables": {
+    "theta": "coherente",
+    "pi": "resuelta",
+    "kappa": "coherente",
+    "eta": "completa",
+    "gamma": "alineada",
+    "alpha": "apropiada",
+    "mu": "cerrada",
+    "chi": "sin-solicitud",
+    "psi": "cerrado"
+  },
+  "vector_esperado": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "gamma_h_esperada": {},
+  "k3_esperado": "APTO",
+  "politica_esperada": "cerrar",
+  "justificacion": "Frame bien formado y completamente cerrado."
+}
