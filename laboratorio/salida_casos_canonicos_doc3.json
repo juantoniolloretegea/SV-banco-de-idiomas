@@ -1,0 +1,479 @@
+{
+  "resumen_global": {
+    "casos": 7,
+    "casos_satisfactorios": 7,
+    "k3_totalidad": true,
+    "clases_observadas": [
+      "APTO",
+      "INDETERMINADO",
+      "NO_APTO"
+    ],
+    "compuerta_conservadora": true,
+    "append_only": true,
+    "pares_criticos_compuerta": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        "U"
+      ],
+      [
+        "U",
+        1
+      ],
+      [
+        0,
+        "U"
+      ],
+      [
+        "U",
+        0
+      ],
+      [
+        "U",
+        "U"
+      ],
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  "casos": {
+    "caso_A_pregunta_y_referente_abiertos": {
+      "caso": "caso_A_pregunta_y_referente_abiertos",
+      "observables": {
+        "theta": "coherente",
+        "pi": "indeterminada",
+        "kappa": "coherente",
+        "eta": "completa",
+        "gamma": "alineada",
+        "alpha": "apropiada",
+        "mu": "indeterminada",
+        "chi": "sin-solicitud",
+        "psi": "en-curso"
+      },
+      "C_frame^9": [
+        0,
+        "U",
+        0,
+        0,
+        0,
+        0,
+        "U",
+        0,
+        0
+      ],
+      "Gamma_H": {
+        "2": "fronteriza",
+        "7": "fronteriza"
+      },
+      "U_irr": [],
+      "C_gob^9": [
+        0,
+        "U",
+        0,
+        0,
+        0,
+        0,
+        "U",
+        0,
+        0
+      ],
+      "A_NLP": [
+        0,
+        "U",
+        0,
+        0,
+        0,
+        0,
+        "U",
+        0,
+        0
+      ],
+      "kappa_3": "INDETERMINADO",
+      "politica": "CONTINUAR_EN_W(T,k)",
+      "k(v)": 4,
+      "bloques_u": 2,
+      "threshold": 7
+    },
+    "caso_B_cierre_suficiente_del_frame": {
+      "caso": "caso_B_cierre_suficiente_del_frame",
+      "observables": {
+        "theta": "coherente",
+        "pi": "resuelta",
+        "kappa": "coherente",
+        "eta": "completa",
+        "gamma": "alineada",
+        "alpha": "apropiada",
+        "mu": "cerrada",
+        "chi": "sin-solicitud",
+        "psi": "cerrado"
+      },
+      "C_frame^9": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Gamma_H": {},
+      "U_irr": [],
+      "C_gob^9": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "A_NLP": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kappa_3": "APTO",
+      "politica": "CERRAR_FRAME",
+      "k(v)": 0,
+      "bloques_u": 0,
+      "threshold": 7
+    },
+    "caso_C_objetivo_y_clarificacion_abiertos": {
+      "caso": "caso_C_objetivo_y_clarificacion_abiertos",
+      "observables": {
+        "theta": "coherente",
+        "pi": "sin-pregunta",
+        "kappa": "coherente",
+        "eta": "completa",
+        "gamma": "indeterminada",
+        "alpha": "apropiada",
+        "mu": "sin-ambigüedad",
+        "chi": "indeterminada",
+        "psi": "indeterminado"
+      },
+      "C_frame^9": [
+        0,
+        0,
+        0,
+        0,
+        "U",
+        0,
+        0,
+        "U",
+        "U"
+      ],
+      "Gamma_H": {
+        "5": "fronteriza",
+        "8": "fronteriza",
+        "9": "fronteriza"
+      },
+      "U_irr": [],
+      "C_gob^9": [
+        0,
+        0,
+        0,
+        0,
+        "U",
+        0,
+        0,
+        "U",
+        "U"
+      ],
+      "A_NLP": [
+        0,
+        0,
+        0,
+        0,
+        "U",
+        0,
+        0,
+        "U",
+        "U"
+      ],
+      "kappa_3": "INDETERMINADO",
+      "politica": "CONTINUAR_EN_W(T,k)",
+      "k(v)": 4,
+      "bloques_u": 2,
+      "threshold": 7
+    },
+    "caso_D_contradiccion_material_persistente": {
+      "caso": "caso_D_contradiccion_material_persistente",
+      "observables": {
+        "theta": "desvío",
+        "pi": "bloqueada",
+        "kappa": "contradictoria",
+        "eta": "completa",
+        "gamma": "bloqueada",
+        "alpha": "inapropiada",
+        "mu": "incompatible",
+        "chi": "denegada",
+        "psi": "bloqueado"
+      },
+      "C_frame^9": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "Gamma_H": {},
+      "U_irr": [],
+      "C_gob^9": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "A_NLP": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kappa_3": "NO_APTO",
+      "politica": "PROPONER_FORK",
+      "k(v)": 0,
+      "bloques_u": 0,
+      "threshold": 7
+    },
+    "caso_E_puerta_limpia_hacia_inmunologia": {
+      "caso": "caso_E_puerta_limpia_hacia_inmunologia",
+      "observables": {
+        "theta": "coherente",
+        "pi": "resuelta",
+        "kappa": "coherente",
+        "eta": "completa",
+        "gamma": "alineada",
+        "alpha": "apropiada",
+        "mu": "sin-ambigüedad",
+        "chi": "sin-solicitud",
+        "psi": "cerrado"
+      },
+      "C_frame^9": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Gamma_H": {},
+      "U_irr": [],
+      "C_gob^9": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "A_NLP": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kappa_3": "APTO",
+      "politica": "CERRAR_FRAME",
+      "k(v)": 0,
+      "bloques_u": 0,
+      "threshold": 7
+    },
+    "caso_F_huecos_linguisticos_salvables": {
+      "caso": "caso_F_huecos_linguisticos_salvables",
+      "observables": {
+        "theta": "coherente",
+        "pi": "indeterminada",
+        "kappa": "coherente",
+        "eta": "indeterminada",
+        "gamma": "indeterminada",
+        "alpha": "apropiada",
+        "mu": "indeterminada",
+        "chi": "indeterminada",
+        "psi": "indeterminado"
+      },
+      "C_frame^9": [
+        0,
+        "U",
+        0,
+        "U",
+        "U",
+        0,
+        "U",
+        "U",
+        "U"
+      ],
+      "Gamma_H": {
+        "2": "fronteriza",
+        "4": "resoluble",
+        "5": "fronteriza",
+        "7": "fronteriza",
+        "8": "fronteriza",
+        "9": "fronteriza"
+      },
+      "U_irr": [],
+      "C_gob^9": [
+        0,
+        "U",
+        0,
+        0,
+        "U",
+        0,
+        "U",
+        "U",
+        "U"
+      ],
+      "A_NLP": [
+        0,
+        "U",
+        0,
+        "U",
+        "U",
+        0,
+        "U",
+        "U",
+        "U"
+      ],
+      "kappa_3": "INDETERMINADO",
+      "politica": "CONTINUAR_EN_W(T,k)",
+      "k(v)": 6,
+      "bloques_u": 3,
+      "threshold": 7
+    },
+    "caso_G_contradiccion_ambiguedad_y_denegacion": {
+      "caso": "caso_G_contradiccion_ambiguedad_y_denegacion",
+      "observables": {
+        "theta": "desvío",
+        "pi": "indeterminada",
+        "kappa": "contradictoria",
+        "eta": "defectuosa",
+        "gamma": "indeterminada",
+        "alpha": "inapropiada",
+        "mu": "incompatible",
+        "chi": "denegada",
+        "psi": "bloqueado"
+      },
+      "C_frame^9": [
+        1,
+        "U",
+        1,
+        1,
+        "U",
+        1,
+        1,
+        1,
+        1
+      ],
+      "Gamma_H": {
+        "2": "fronteriza",
+        "5": "fronteriza"
+      },
+      "U_irr": [],
+      "C_gob^9": [
+        1,
+        "U",
+        1,
+        1,
+        "U",
+        1,
+        1,
+        1,
+        1
+      ],
+      "A_NLP": [
+        1,
+        "U",
+        1,
+        1,
+        "U",
+        1,
+        1,
+        1,
+        1
+      ],
+      "kappa_3": "NO_APTO",
+      "politica": "PROPONER_FORK",
+      "k(v)": 4,
+      "bloques_u": 2,
+      "threshold": 7
+    }
+  },
+  "traza_fork_minima": {
+    "trayectoria_original": [
+      {
+        "frame": "S0",
+        "kappa_3": "INDETERMINADO"
+      },
+      {
+        "frame": "S1",
+        "kappa_3": "INDETERMINADO"
+      },
+      {
+        "frame": "S2",
+        "kappa_3": "NO_APTO"
+      }
+    ],
+    "trayectoria_fork": [
+      {
+        "frame": "S0",
+        "kappa_3": "INDETERMINADO"
+      },
+      {
+        "frame": "S1",
+        "kappa_3": "INDETERMINADO"
+      },
+      {
+        "frame": "S1_fork",
+        "kappa_3": "INDETERMINADO"
+      }
+    ]
+  }
+}

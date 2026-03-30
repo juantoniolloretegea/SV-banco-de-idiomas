@@ -1,0 +1,55 @@
+funcion I_NLP(ω):
+    leer theta, pi, kappa, eta, gamma, alpha, mu, chi, psi
+    canonizar variantes léxicas visibles
+    proyectar cada observable a {0,1,U}
+    devolver C_frame^9
+
+funcion Γbar_H(C_frame^9, H_NLP):
+    para cada posición Pj:
+        si C_frame[j] = 1:
+            C_gob[j] = 1
+        si C_frame[j] = 0:
+            C_gob[j] = 0
+        si C_frame[j] = U y Γ_H(Pj) = irreducible:
+            C_gob[j] = 1
+        si C_frame[j] = U y Γ_H(Pj) = resoluble:
+            C_gob[j] = 0
+        si C_frame[j] = U y Γ_H(Pj) = fronteriza:
+            C_gob[j] = U
+    devolver C_gob^9
+
+funcion T_NLP(C_gob^9, C_frame^9):
+    por posición j:
+        si C_gob[j] = 1 o C_frame[j] = 1:
+            A[j] = 1
+        si C_gob[j] = 0 y C_frame[j] = 0:
+            A[j] = 0
+        en cualquier otro caso:
+            A[j] = U
+    devolver A_NLP
+
+funcion κ_3(A_NLP, U_irr):
+    si existe 1 en A_NLP:
+        devolver NO_APTO
+    si U_irr ≠ ∅:
+        devolver NO_APTO
+    si existe U en A_NLP:
+        devolver INDETERMINADO
+    devolver APTO
+
+funcion politica_nlp(clase):
+    si clase = APTO:
+        devolver CERRAR_FRAME
+    si clase = INDETERMINADO:
+        devolver CONTINUAR_EN_W(T,k)
+    devolver PROPONER_FORK
+
+funcion agente_nlp(ω, H_NLP):
+    C_frame = I_NLP(ω)
+    C_gob = Γbar_H(C_frame, H_NLP)
+    A = T_NLP(C_gob, C_frame)
+    gamma = Γ_H(C_frame, H_NLP)
+    U_irr = posiciones irreducibles de gamma
+    clase = κ_3(A, U_irr)
+    politica = politica_nlp(clase)
+    devolver (C_frame, C_gob, A, gamma, U_irr, clase, politica)
