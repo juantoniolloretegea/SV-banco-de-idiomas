@@ -30,7 +30,7 @@
     ],
     "gamma_h_esperada": {},
     "k3_esperado": "APTO",
-    "politica_esperada": "cerrar",
+    "politica_esperada": "CERRAR_FRAME",
     "justificacion": "Frame bien formado y completamente cerrado."
   },
   {
@@ -64,7 +64,7 @@
     ],
     "gamma_h_esperada": {},
     "k3_esperado": "APTO",
-    "politica_esperada": "cerrar",
+    "politica_esperada": "CERRAR_FRAME",
     "justificacion": "Caso de puerta limpia hacia un agente inmunológico posterior."
   },
   {
@@ -98,7 +98,7 @@
     ],
     "gamma_h_esperada": {},
     "k3_esperado": "NO_APTO",
-    "politica_esperada": "fork",
+    "politica_esperada": "PROPONER_FORK",
     "justificacion": "Contradicción material, insuficiencia y denegación de clarificación."
   }
 ]

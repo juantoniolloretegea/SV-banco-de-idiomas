@@ -1,4 +1,4 @@
 id,idioma,dominio_proximo,acto_esperado,objetivo_declarado,vector_esperado,k3_esperado,politica_esperada,justificacion
-ES-NLP-0001,es,general,clasificacion,Ordenación estructural del frame.,"[0, 0, 0, 0, 0, 0, 0, 0, 0]",APTO,cerrar,Frame bien formado y completamente cerrado.
-ES-NLP-0002,es,inmunologia_puerta,derivacion,Preparar el frame para un agente posterior de inmunología.,"[0, 0, 0, 0, 0, 0, 0, 0, 0]",APTO,cerrar,Caso de puerta limpia hacia un agente inmunológico posterior.
-ES-NLP-0003,es,inmunologia_puerta,derivacion,Forzar salida final sin cierre legítimo.,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",NO_APTO,fork,"Contradicción material, insuficiencia y denegación de clarificación."
+ES-NLP-0001,es,general,clasificacion,Ordenación estructural del frame.,"[0, 0, 0, 0, 0, 0, 0, 0, 0]",APTO,CERRAR_FRAME,Frame bien formado y completamente cerrado.
+ES-NLP-0002,es,inmunologia_puerta,derivacion,Preparar el frame para un agente posterior de inmunología.,"[0, 0, 0, 0, 0, 0, 0, 0, 0]",APTO,CERRAR_FRAME,Caso de puerta limpia hacia un agente inmunológico posterior.
+ES-NLP-0003,es,inmunologia_puerta,derivacion,Forzar salida final sin cierre legítimo.,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",NO_APTO,PROPONER_FORK,"Contradicción material, insuficiencia y denegación de clarificación."

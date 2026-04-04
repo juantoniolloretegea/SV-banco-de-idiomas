@@ -16,6 +16,6 @@
 
 ## Política esperada
 
-- `cerrar`
-- `continuar`
-- `fork`
+- `CERRAR_FRAME`
+- `CONTINUAR_EN_W(T,k)`
+- `PROPONER_FORK`

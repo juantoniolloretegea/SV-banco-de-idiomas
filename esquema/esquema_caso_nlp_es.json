@@ -1,37 +1,180 @@
 {
-  "id": "ES-NLP-0001",
-  "idioma": "es",
-  "dominio_proximo": "general|inmunologia_puerta",
-  "texto": "Texto del caso en español.",
-  "acto_esperado": "consulta|clasificacion|resumen|clarificacion|derivacion",
-  "objetivo_declarado": "Objetivo explícito del frame.",
-  "observables": {
-    "theta": "coherente|desvío|indeterminado",
-    "pi": "sin-pregunta|resuelta|bloqueada|indeterminada",
-    "kappa": "coherente|contradictoria|indeterminada",
-    "eta": "completa|defectuosa|indeterminada",
-    "gamma": "alineada|bloqueada|indeterminada",
-    "alpha": "apropiada|inapropiada|indeterminada",
-    "mu": "sin-ambigüedad|cerrada|incompatible|indeterminada",
-    "chi": "sin-solicitud|atendida|denegada|indeterminada",
-    "psi": "en-curso|cerrado|bloqueado|indeterminado"
-  },
-  "vector_esperado": [
-    0,
-    "U",
-    0,
-    0,
-    0,
-    0,
-    "U",
-    0,
-    0
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sv.local/esquema_caso_nlp_es.schema.json",
+  "title": "Caso canónico NLP español — banco de idiomas SV",
+  "type": "object",
+  "required": [
+    "id",
+    "idioma",
+    "dominio_proximo",
+    "texto",
+    "acto_esperado",
+    "objetivo_declarado",
+    "observables",
+    "vector_esperado",
+    "gamma_h_esperada",
+    "k3_esperado",
+    "politica_esperada",
+    "justificacion"
   ],
-  "gamma_h_esperada": {
-    "2": "fronteriza",
-    "7": "fronteriza"
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^ES-NLP-\\d{4}$"
+    },
+    "idioma": {
+      "const": "es"
+    },
+    "dominio_proximo": {
+      "enum": [
+        "general",
+        "inmunologia_puerta"
+      ]
+    },
+    "texto": {
+      "type": "string",
+      "minLength": 1
+    },
+    "acto_esperado": {
+      "enum": [
+        "consulta",
+        "clasificacion",
+        "resumen",
+        "clarificacion",
+        "derivacion"
+      ]
+    },
+    "objetivo_declarado": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observables": {
+      "type": "object",
+      "required": [
+        "theta",
+        "pi",
+        "kappa",
+        "eta",
+        "gamma",
+        "alpha",
+        "mu",
+        "chi",
+        "psi"
+      ],
+      "properties": {
+        "theta": {
+          "enum": [
+            "coherente",
+            "desvío",
+            "indeterminado"
+          ]
+        },
+        "pi": {
+          "enum": [
+            "sin-pregunta",
+            "resuelta",
+            "bloqueada",
+            "indeterminada"
+          ]
+        },
+        "kappa": {
+          "enum": [
+            "coherente",
+            "contradictoria",
+            "indeterminada"
+          ]
+        },
+        "eta": {
+          "enum": [
+            "completa",
+            "defectuosa",
+            "indeterminada"
+          ]
+        },
+        "gamma": {
+          "enum": [
+            "alineada",
+            "bloqueada",
+            "indeterminada"
+          ]
+        },
+        "alpha": {
+          "enum": [
+            "apropiada",
+            "inapropiada",
+            "indeterminada"
+          ]
+        },
+        "mu": {
+          "enum": [
+            "sin-ambigüedad",
+            "cerrada",
+            "incompatible",
+            "indeterminada"
+          ]
+        },
+        "chi": {
+          "enum": [
+            "sin-solicitud",
+            "atendida",
+            "denegada",
+            "indeterminada"
+          ]
+        },
+        "psi": {
+          "enum": [
+            "en-curso",
+            "cerrado",
+            "bloqueado",
+            "indeterminado"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "vector_esperado": {
+      "type": "array",
+      "minItems": 9,
+      "maxItems": 9,
+      "items": {
+        "enum": [
+          0,
+          1,
+          "U"
+        ]
+      }
+    },
+    "gamma_h_esperada": {
+      "type": "object",
+      "patternProperties": {
+        "^[1-9]$": {
+          "enum": [
+            "irreducible",
+            "resoluble",
+            "fronteriza"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "k3_esperado": {
+      "enum": [
+        "APTO",
+        "INDETERMINADO",
+        "NO_APTO"
+      ]
+    },
+    "politica_esperada": {
+      "enum": [
+        "CERRAR_FRAME",
+        "CONTINUAR_EN_W(T,k)",
+        "PROPONER_FORK"
+      ]
+    },
+    "justificacion": {
+      "type": "string",
+      "minLength": 1
+    }
   },
-  "k3_esperado": "INDETERMINADO",
-  "politica_esperada": "continuar",
-  "justificacion": "Justificación breve del caso."
+  "additionalProperties": false
 }

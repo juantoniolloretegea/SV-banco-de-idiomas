@@ -1,0 +1,56 @@
+schema: observables_proxy_spec_v1
+objetivo: >-
+  Declarar observables proxy y particiones B0/B1/BU para capas auxiliares de extracción
+  lingüística o visual que produzcan observables del SV sin cerrar κ₃.
+dominio: nlp
+claves:
+  - theta
+  - pi
+  - kappa
+  - eta
+  - gamma
+  - alpha
+  - mu
+  - chi
+  - psi
+particiones:
+  theta:
+    B0: [coherente]
+    B1: [desvio]
+    BU: [indeterminado, indeterminada]
+  pi:
+    B0: [sin-pregunta, resuelta]
+    B1: [bloqueada]
+    BU: [indeterminada]
+  kappa:
+    B0: [coherente]
+    B1: [contradictoria]
+    BU: [indeterminada]
+  eta:
+    B0: [completa]
+    B1: [defectuosa]
+    BU: [indeterminada]
+  gamma:
+    B0: [alineada]
+    B1: [bloqueada]
+    BU: [indeterminada]
+  alpha:
+    B0: [apropiada]
+    B1: [inapropiada]
+    BU: [indeterminada]
+  mu:
+    B0: [sin-ambiguedad, cerrada]
+    B1: [incompatible]
+    BU: [indeterminada]
+  chi:
+    B0: [sin-solicitud, atendida]
+    B1: [denegada]
+    BU: [indeterminada]
+  psi:
+    B0: [en-curso, cerrado]
+    B1: [bloqueado]
+    BU: [indeterminado]
+reglas:
+  - Ningún extractor puede emitir κ3.
+  - Toda salida proxy debe validarse contra el dominio declarado antes del motor.
+  - Si falta base suficiente, la salida correcta es BU/U y nunca un cierre fingido.
